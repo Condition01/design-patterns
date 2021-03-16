@@ -9,14 +9,14 @@ export class CharacteristicsFactory {
         let characteristic;
 
         this.characteristics.forEach(c => {
-            if(c && c.color === c.color) {
+            if (c && c.color === c.color && c.eyeColor === eyeColor && c.sex === sex && c.bodyType === bodyType) {
                 characteristic = c;
             }
         })
 
-        if(characteristic){
+        if (characteristic) {
             return characteristic;
-        }else {
+        } else {
             console.log(this.characteristics);
             characteristic = new Characteristics(color, eyeColor, sex, bodyType);
             this.characteristics.push(characteristic);
@@ -25,11 +25,11 @@ export class CharacteristicsFactory {
     }
 
     static getInstance(): CharacteristicsFactory {
-        if(!CharacteristicsFactory.instance){
+        if (!CharacteristicsFactory.instance) {
             CharacteristicsFactory.instance = new CharacteristicsFactory();
-        } 
+        }
         return CharacteristicsFactory.instance;
     }
 
-   
+
 }
