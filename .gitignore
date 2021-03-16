@@ -3,6 +3,8 @@ bin-debug/
 bin-release/
 [Oo]bj/
 [Bb]in/
+./flyweight/node_modules
+./flyweight/dist
 
 # Other files and folders
 .settings/
